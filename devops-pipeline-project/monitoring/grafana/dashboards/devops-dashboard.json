@@ -1,0 +1,199 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "DevOps Pipeline Dashboard",
+    "tags": ["devops", "monitoring", "pipeline"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Frontend CPU Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "frontend_cpu_usage_percent",
+            "refId": "A",
+            "legendFormat": "CPU %"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 6, "x": 0, "y": 0},
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 50},
+                {"color": "red", "value": 80}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "Backend CPU Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "backend_cpu_usage_percent",
+            "refId": "A",
+            "legendFormat": "CPU %"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 6, "x": 6, "y": 0},
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 50},
+                {"color": "red", "value": 80}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "title": "Frontend Memory Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "frontend_memory_usage_percent",
+            "refId": "A",
+            "legendFormat": "Memory %"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 6, "x": 12, "y": 0},
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 70},
+                {"color": "red", "value": 90}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 4,
+        "title": "Backend Memory Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "backend_memory_usage_percent",
+            "refId": "A",
+            "legendFormat": "Memory %"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 6, "x": 18, "y": 0},
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 70},
+                {"color": "red", "value": 90}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "Service Uptime",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "frontend_uptime_seconds",
+            "refId": "A",
+            "legendFormat": "Frontend Uptime"
+          },
+          {
+            "expr": "backend_uptime_seconds",
+            "refId": "B",
+            "legendFormat": "Backend Uptime"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s"
+          }
+        }
+      },
+      {
+        "id": 6,
+        "title": "Request Counts",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(frontend_requests_total[5m])",
+            "refId": "A",
+            "legendFormat": "Frontend Requests/sec"
+          },
+          {
+            "expr": "rate(backend_requests_total[5m])",
+            "refId": "B",
+            "legendFormat": "Backend Requests/sec"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+        "fieldConfig": {
+          "defaults": {
+            "unit": "reqps"
+          }
+        }
+      },
+      {
+        "id": 7,
+        "title": "System Load (Node Exporter)",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "node_load1",
+            "refId": "A",
+            "legendFormat": "1m load avg"
+          },
+          {
+            "expr": "node_load5",
+            "refId": "B",
+            "legendFormat": "5m load avg"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 16}
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "refresh": "5s"
+  }
+}
