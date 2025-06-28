@@ -2,39 +2,6 @@
 
 A comprehensive multi-service application demonstrating modern DevOps practices including containerization, monitoring, security scanning, and incident management.
 
-## 🏗️ Architecture Overview
-
-This project implements a complete DevOps pipeline with the following services:
-
-```mermaid
-graph TB
-    subgraph "Application Layer"
-        FE[Frontend Service<br/>Port 5000]
-        BE[Backend Service<br/>Port 5001]
-    end
-    
-    subgraph "Monitoring Stack"
-        P[Prometheus<br/>Port 9090]
-        G[Grafana<br/>Port 3000]
-        NE[Node Exporter<br/>Port 9100]
-    end
-    
-    subgraph "Security & Incident Management"
-        T[Trivy Scanner]
-        I[Incident Simulation]
-        PM[Post-Mortem Reports]
-    end
-    
-    FE --> BE
-    P --> FE
-    P --> BE
-    P --> NE
-    G --> P
-    T --> FE
-    T --> BE
-    I --> BE
-```
-
 ## 📋 Prerequisites
 
 ### For Windows Users (Recommended Setup)
