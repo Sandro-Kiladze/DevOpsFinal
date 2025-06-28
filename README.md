@@ -201,17 +201,17 @@ Three pre-configured dashboards provide comprehensive monitoring:
 
 ### Screenshots
 
-![DockerPS](./images/dockerPS.png)
+![DockerPS](devops-pipeline-project/images/dockerPS.png)
 
-![DockerImages](./images/dockerImages.png)
+![DockerImages](devops-pipeline-project/images/dockerImages.png)
 
-![FrontEnd](./images/frontendRunning.png)
+![FrontEnd](devops-pipeline-project/images/frontendRunning.png)
 
-![Backend](./images/backendAPIrunning.png)
+![Backend](devops-pipeline-project/images/backendAPIrunning.png)
 
-![Grafana Dashboard](./images/Grafana.png)
+![Grafana Dashboard](devops-pipeline-project/images/Grafana.png)
 
-![Prometheus Targets](./images/prometheTarget.png)
+![Prometheus Targets](devops-pipeline-project/images/prometheTarget.png)
 
 ## 🔒 Security Implementation
 
@@ -248,7 +248,7 @@ The status will_not_fix typically means:
 
 ### Security Scan Screenshot
 
-![Security Scan Results](./security/scan-results.txt)
+![Security Scan Results](devops-pipeline-project/security/scan-results.txt)
 *Trivy security scan results showing vulnerability breakdown*
 
 ### Docker Secrets Management
@@ -322,7 +322,7 @@ Backend unreachable
 
 ### Incident Monitoring Screenshot
 
-![Incident Monitoring](./incident/post-mortem-report.md)
+![Incident Monitoring](devops-pipeline-project/incident/post-mortem-report.md)
 *Grafana dashboard during incident simulation showing service status*
 
 ## 📁 Project Structure
