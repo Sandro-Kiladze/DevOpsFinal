@@ -1,0 +1,43 @@
+=== Incident Simulation Started ===
+Time: Sat Jun 28 17:43:13 +04 2025
+
+Step 1: Recording baseline metrics...
+{
+  "service": "frontend",
+  "status": "healthy",
+  "timestamp": "2025-06-28 13:43:13",
+  "uptime": 15
+}
+{
+  "service": "backend",
+  "status": "healthy",
+  "timestamp": "2025-06-28 13:43:13",
+  "uptime": 16
+}
+
+Step 2: Simulating backend failure...
+Backend container stopped at Sat Jun 28 17:43:17 +04 2025
+
+Step 3: Monitoring system behavior for 60 seconds...
+Check 1 at Sat Jun 28 17:43:17 +04 2025:
+Backend unreachable
+Check 2 at Sat Jun 28 17:43:22 +04 2025:
+Backend unreachable
+Check 3 at Sat Jun 28 17:43:27 +04 2025:
+Backend unreachable
+Check 4 at Sat Jun 28 17:43:32 +04 2025:
+Backend unreachable
+Check 5 at Sat Jun 28 17:43:35 +04 2025:
+Backend unreachable
+Check 6 at Sat Jun 28 17:43:40 +04 2025:
+Backend unreachable
+Check 7 at Sat Jun 28 17:43:45 +04 2025:
+Backend unreachable
+Check 8 at Sat Jun 28 17:43:51 +04 2025:
+Backend unreachable
+Check 9 at Sat Jun 28 17:43:56 +04 2025:
+Backend unreachable
+Check 10 at Sat Jun 28 17:44:01 +04 2025:
+Backend unreachable
+Check 11 at Sat Jun 28 17:44:04 +04 2025:
+Backend unreachable
